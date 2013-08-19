@@ -38,7 +38,7 @@
 	</table>
 	
 	<div class="well">
-	  <form class="bs-example form-horizontal" action="new" method="POST">
+	  <form class="bs-example form-horizontal" action="todolist" method="POST">
 	    <fieldset>
 	      <legend>New User</legend>
 	      <div class="form-group">
@@ -62,11 +62,12 @@
 	      </div>
 	      
 	      <div class="form-group">
-	        <label for="inputLastname" class="col-lg-2 control-label">Date de naissance</label>
+	        <label for="inputBirthDate" class="col-lg-2 control-label">Date de naissance</label>
 	        <div class="col-lg-10">
 	          <input class="form-control datepicker" id="inputBirthDate" placeholder="Date de naissance" type="text" name="birthDate">
 	        </div>
 	      </div>
+	      <input type="hidden" name="action" value="add"/>
 	      <button class="btn btn-primary" style="float:right;" type="submit">Enregistrer</button>
 	    </fieldset>
 	  </form>

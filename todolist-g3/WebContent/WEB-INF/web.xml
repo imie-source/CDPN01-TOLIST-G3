@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet><servlet-name>TodolistServlet</servlet-name>
+  <servlet-class>com.imie.todolist.view.TodolistServlet</servlet-class></servlet>
+  
+  <servlet-mapping>
+  <servlet-name>TodolistServlet</servlet-name>
+  <url-pattern>/todolist</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
