@@ -8,7 +8,7 @@
 
 <title>Todo List G3</title>
 
-    <link rel="stylesheet" href="./bootstrap.min.css" media="screen">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="js/setDatepicker.js"></script>
 </head>
