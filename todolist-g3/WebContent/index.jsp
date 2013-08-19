@@ -6,10 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/css.css" media="screen">
 
-<title>Insert title here</title>
+<title>Todo List G3</title>
 
     <link rel="stylesheet" href="./bootstrap.min.css" media="screen">
-    
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/setDatepicker.js"></script>
 </head>
 <body>
 
@@ -63,7 +64,7 @@
 	      <div class="form-group">
 	        <label for="inputBirthDate" class="col-lg-2 control-label">Date de naissance</label>
 	        <div class="col-lg-10">
-	          <input class="form-control" id="inputBirthDate" placeholder="Date de naissance" type="text" name="birthDate">
+	          <input class="form-control datepicker" id="inputBirthDate" placeholder="Date de naissance" type="text" name="birthDate">
 	        </div>
 	      </div>
 	      <input type="hidden" name="action" value="add"/>
