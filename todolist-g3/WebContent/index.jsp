@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.ArrayList"%> 
+    <%@ page import="com.imie.todolist.model.Person"%> 
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,27 +18,54 @@
 <body>
 
 <h1>Users</h1>
+<%
+
+	ArrayList<Person> pers = (ArrayList<Person>) request.getAttribute("persons");
+
+
+%>
 <div style="width:800px;margin:0 auto;">
-	<table class="table table-striped table-bordered table-hover" >
-	  <thead>
-	    <tr>
-	      <th>#</th>
-	      <th>Nom</th>
-	      <th>Prénom</th>
-	      <th>Téléphone</th>
-	      <th>Date de naissance</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>1</td>
-	      <td>Jon</td>
-	      <td>Rambo</td>
-	      <td>01-23-55-44-78</td>
-	      <td>01/01/1998</td>
-	    </tr>
-	  </tbody>
-	</table>
+	
+	  <%
+	  	if( pers!=null ) {
+	  		%>
+	  		<table class="table table-striped table-bordered table-hover" >
+			  <thead>
+			    <tr>
+			      <th>#</th>
+			      <th>Nom</th>
+			      <th>Prénom</th>
+			      <th>Téléphone</th>
+			      <th>Date de naissance</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+	  		<%
+	  		int cpt=1;
+			for(Person p: pers){
+			 %> 
+			 <tr> 	
+			 	<td><%= cpt %></td>
+			 	<td><%= p.getName() %></td>
+			 	<td><%= p.getFirstname() %></td>
+			 	<td><%= p.getTel() %></td>
+			 	<td><%= p.getBirthday() %></td>
+			 </tr> <% 
+			 cpt++;
+			}
+			
+			%>
+			</tbody>
+			</table>
+			<%
+	  	}else{
+	  		%> <h3>Aucune donnée</h3><%
+	  	}
+	  
+	  %>
+	    
+	  
+
 	
 	<div class="well">
 	  <form class="bs-example form-horizontal" action="todolist" method="POST">
