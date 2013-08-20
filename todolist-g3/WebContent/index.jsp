@@ -68,33 +68,33 @@
 
 	
 	<div class="well">
-	  <form class="bs-example form-horizontal" action="todolist" method="POST">
+	  <form class="bs-example form-horizontal" id="formToDo" action="todolist" method="POST">
 	    <fieldset>
 	      <legend>New User</legend>
 	      <div class="form-group">
 	        <label for="inputFirstname" class="col-lg-2 control-label">Prénom</label>
 	        <div class="col-lg-10">
-	          <input class="form-control" id="inputFirstname" placeholder="Prénom" type="text" name="firstname">
+	          <input class="form-control" id="inputFirstname" placeholder="Prénom" type="text" id="firstname" name="firstname" required="required">
 	        </div>
 	      </div>
 	      <div class="form-group">
 	        <label for="inputLastname" class="col-lg-2 control-label">Nom</label>
 	        <div class="col-lg-10">
-	          <input class="form-control" id="inputLastname" placeholder="Nom" type="text" name="lastname">
+	          <input class="form-control" id="inputLastname" placeholder="Nom" type="text" id="lastname" name="lastname" required="required">
 	        </div>
 	      </div>
 	     
 	     <div class="form-group">
 	        <label for="inputTel" class="col-lg-2 control-label">Tel</label>
 	        <div class="col-lg-10">
-	          <input class="form-control" id="inputTel" placeholder="Téléphone" type="text" name="tel">
+	          <input class="form-control" id="inputTel" placeholder="Téléphone" type="tel" id="tel" name="tel" required="required">
 	        </div>
 	      </div>
 	      
 	      <div class="form-group">
 	        <label for="inputBirthDate" class="col-lg-2 control-label">Date de naissance</label>
 	        <div class="col-lg-10">
-	          <input class="form-control datepicker" id="inputBirthDate" placeholder="Date de naissance" type="text" name="birthDate">
+	          <input class="form-control datepicker" id="inputBirthDate" placeholder="Date de naissance" type="text" name="birthDate" required="required">
 	        </div>
 	      </div>
 	      <input type="hidden" name="action" value="add"/>
