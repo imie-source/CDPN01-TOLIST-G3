@@ -9,6 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/css.css" media="screen">
+<link rel="stylesheet" href="css/datepicker.css" media="screen">
 
 <title>Todo List G3</title>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -17,7 +18,7 @@
 </head>
 <body>
 
-<h1>Users</h1>
+<h1 style="text-align:center;">Users</h1>
 <%
 
 	ArrayList<Person> pers = (ArrayList<Person>) request.getAttribute("persons");
