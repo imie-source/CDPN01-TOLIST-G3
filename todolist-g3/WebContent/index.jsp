@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ page import="java.util.ArrayList"%> 
-    <%@ page import="com.imie.todolist.model.Person"%> 
+    <%@ page import="com.imie.todolist.model.*" %> 
+    <%@ page import="java.text.SimpleDateFormat" %>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,7 +11,6 @@
 <link rel="stylesheet" href="css/css.css" media="screen">
 
 <title>Todo List G3</title>
-
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="js/setDatepicker.js"></script>
@@ -21,7 +21,7 @@
 <%
 
 	ArrayList<Person> pers = (ArrayList<Person>) request.getAttribute("persons");
-
+	
 
 %>
 <div style="width:800px;margin:0 auto;">
@@ -42,6 +42,7 @@
 			  <tbody>
 	  		<%
 	  		int cpt=1;
+	  		SimpleDateFormat  formater = new SimpleDateFormat("dd/MM/yy");
 			for(Person p: pers){
 			 %> 
 			 <tr> 	
@@ -49,7 +50,7 @@
 			 	<td><%= p.getName() %></td>
 			 	<td><%= p.getFirstname() %></td>
 			 	<td><%= p.getTel() %></td>
-			 	<td><%= p.getBirthday() %></td>
+			 	<td><%= formater.format(p.getBirthday()) %></td>
 			 </tr> <% 
 			 cpt++;
 			}
