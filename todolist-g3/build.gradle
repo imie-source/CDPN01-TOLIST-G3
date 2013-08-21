@@ -37,5 +37,6 @@ dependencies {
 }
 
 war {
-    from 'WebContent' // adds a file-set to the root of the archive
+   from 'WebContent' // adds a file-set to the root of the archive
+   dependsOn 'test'
 }
