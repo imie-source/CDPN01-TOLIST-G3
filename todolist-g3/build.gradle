@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 on = '1.0.0-SNAPSHOT'
+=======
+version = '1.0.0-SNAPSHOT'
+>>>>>>> 2ddd74f35a4add0b77acffc51a34c29cd78041be
 
 apply plugin: 'java'
 apply plugin: 'war'
 
+<<<<<<< HEAD
 sourceCompatibility = 1.6
+=======
+sourceCompatibility  = 1.6
+>>>>>>> 2ddd74f35a4add0b77acffc51a34c29cd78041be
 
 sourceSets {
     main {
@@ -38,5 +46,6 @@ dependencies {
 
 war {
     from 'WebContent' // adds a file-set to the root of the archive
-    webInf { from 'WebContent/WEB-INF' } // adds a file-set to the WEB-INF dir.
 }
+ 
+>>>>>>> 2ddd74f35a4add0b77acffc51a34c29cd78041be
