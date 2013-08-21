@@ -10,7 +10,8 @@ public class TodolistTester {
 	@Test
 	public void testEnEchec() {
 		
-		fail("Echec fait expres.");
+		Person p = new Person();
+		
 	}
 	
 	@Test
