@@ -1,0 +1,42 @@
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility  = 1.6
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDir 'test'
+        }
+        resources {
+            srcDir 'test'
+        }
+    }
+    
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'org.jboss.spec.javax.servlet:jboss-servlet-api_3.0_spec:1.0.0.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile 'org.mockito:mockito-core:1.9.5'
+}
+
+war {
+    from 'WebContent' // adds a file-set to the root of the archive
+}
+ 
