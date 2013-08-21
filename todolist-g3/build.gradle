@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-on = '1.0.0-SNAPSHOT'
-=======
 version = '1.0.0-SNAPSHOT'
 >>>>>>> 2ddd74f35a4add0b77acffc51a34c29cd78041be
 
@@ -9,8 +7,6 @@ apply plugin: 'war'
 
 <<<<<<< HEAD
 sourceCompatibility = 1.6
-=======
-sourceCompatibility  = 1.6
 >>>>>>> 2ddd74f35a4add0b77acffc51a34c29cd78041be
 
 sourceSets {
