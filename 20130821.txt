@@ -1,0 +1,109 @@
+Git 
+
+Nettoyage sur repository : git rm --cached monfichier ?
+
+==================================================
+=                 21/08/2013                     =
+=          Plateforme Integration Continue       =
+==================================================
+<=> Industrialisation
+
+-link gestion source
+--git, svn, mercurial, cvs
+-livrable executable
+--maven
+--gradle
+--ant
+--sbt
+-tests
+--
+-tests reports
+--xUnit
+-qualité de code
+--mesureur
+--pmd
+--checkstyle
+--findbugs
+-colberta
+-jacoco
+-deployer
+--cargo
+-documentation tech
+--javadoc
+
+
+PIC : Gerer les non-régressions - déployer automatiquement 
+
+Recuperer les sources sous github
+
+Creer une clé publique pour le user jenkins = su jenkins
+
+sudo su keygen
+
+ssh-keygen -t rsa
+
+Puis copier coller de la clé de jenkins dans github (Stephane)-Account settings-ssh keys
+
+? Puis : aller sur console jenkins : 
+http://localhost:8070/
+
+Creer le job
+
+Lancer le build-->Erreur-manque settings user.email / user.name 
+1ère facon sur console en su jenkins : 
+git config --global user.email "gobin.stephane@gmail.com"
+jenkins@imie-VirtualBox:~$ git config --global user.name "jenkins"
+ou sur navigateur dans jenkins...
+
+
+--Intégrer Gradle
+install plugin Gradle dans console jenkins
+
+
+
+
+--Tests de non régression
+1 tests : dependance dans 
+2 sous Gradle
+3 sous jenkins
+
+
+--Deploiement
+utiliser cargo dans Gradle (maximum de chose à mettre dans Gradle, le reste dans Jenkins)
+
+configurer le build.gradle (apply 'cargo' ...)
+
+
+
+==================================================
+=                 22/08/2013                     =
+=           SONAR : gestion de la qualité        =
+==================================================
+SONAR :  war + DB (hsqldb) + .properties
+( meme principe que jenkins ) interface web
+open source
+
+Sonar Runner : recupere le projet et envoit à Sonar qui stocke et affiche soit par url sur war (rest ?) 
+Dans le projet : sonar-project.properties
+Gradle Sonar Runner : met à jour directement la BD
+Maven Sonar Runner : met à jour directement la BD
+
+
+FindBugs
+CodeBerta ?
+
+
+VM - nouveau disque 11go - param onglet stockage - type vdi
+
+BoxManage - clonehd : C:\Program Files\Oracle\VirtualBox\VBoxManage clonehd "D:\vm\kunbuntu 12.04\Bigkunbuntu 12.04.vdi" --existing "D:\vm\kunbuntu 12.04\SonarVirtualDisk.vdi"
+
+Sous virtual box : supprimer l'ancien disque dur
+
+Redémarrer la vm
+
+-gparted
+sudo apt-get install gparted
+sudo gparted
+
+click d unmount
+click d 
